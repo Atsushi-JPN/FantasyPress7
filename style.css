@@ -1,0 +1,477 @@
+/*
+Theme Name:   FantasyPress7
+Theme URI:    https://debugroom.jp/fantasypress7/
+Description:  Gaming child theme for GeneratePress. This is the color scheme of a classic Japanese RPG menu. Because this child theme adheres to GeneratePress’s guidelines, it maintains high compatibility with popular plugins such as WooCommerce and BuddyPress. It comes with breadcrumbs and social media share buttons.
+Author:       Atsushi
+Author URI:   https://debugroom.jp/
+Template:     generatepress
+Version:      1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4.0
+License:      GNU General Public License v2 or later
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  generatepress-child
+*/
+
+/*
+ * Base settings: typography, background, text color, and text shadow.
+ */
+html {
+    font-size: 120%;
+}
+
+body {
+    background-color: #000000 !important;
+    color: #e7e7e7;
+    font-size: 1.05rem;
+    text-shadow: 1px 1px 2px #000000;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*
+ * Apply white text and text shadow to headings, content, and post metadata.
+ */
+h1, h2, h3, h4, h5, h6,
+p, li, dt, dd, th, td, label, blockquote,
+.entry-title, .widget-title, .main-title, .site-description,
+.entry-meta, .entry-date, .posted-on, .byline, .author,
+.cat-links, .tags-links, .comments-link,
+time {
+    color: #e7e7e7 !important;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/*
+ * Adjust heading sizes inside sidebar widgets.
+ */
+.sidebar .widget h2,
+.sidebar .widget .widget-title {
+    font-size: 1.25rem !important;
+    line-height: 1.4;
+    margin-bottom: 0.8em;
+}
+
+/*
+ * Link colors and hover states.
+ */
+a,
+a:visited,
+.entry-title a,
+.entry-title a:visited,
+.entry-meta a,
+.entry-meta a:visited,
+.main-navigation .main-nav ul li a,
+.main-navigation .main-nav ul li a:visited {
+    color: #00e7e7 !important;
+    text-shadow: 1px 1px 2px #000000;
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus,
+a:active,
+.entry-title a:hover,
+.entry-meta a:hover,
+.main-navigation .main-nav ul li a:hover,
+.main-navigation .main-nav ul li[class*="current-menu-"] > a {
+    color: #aaaa0a !important;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/*
+ * Set a consistent maximum width for the header, site container, and footer.
+ */
+.site-header,
+.site.grid-container,
+.site-footer {
+    max-width: 1200px !important;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box;
+}
+
+/*
+ * Shared gradient box styling.
+ */
+.site-header,
+.main-navigation,
+.inside-article,
+.comments-area,
+.sidebar .widget,
+.site-footer,
+.footer-widgets,
+.site-info,
+.page-header,
+.paging-navigation {
+    background:
+    radial-gradient(ellipse at top left, #0000b3 0%, transparent 70%),
+    radial-gradient(ellipse at top right, #000084 0%, transparent 70%),
+    radial-gradient(ellipse at bottom left, #000052 0%, transparent 70%),
+    #000021 !important;
+    border: 3px solid #c7c7c7 !important;
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px #000808;
+    box-sizing: border-box;
+}
+
+/*
+ * Set spacing between the main page sections.
+ */
+.site-header {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+}
+
+/*
+ * Restore the navigation layout inside the header.
+ */
+.site-header .main-navigation {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: auto !important;
+}
+
+/*
+ * Reset vertical spacing on the main site wrappers.
+ */
+.site.grid-container,
+.site-content {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/*
+ * Remove default spacing from the main content columns.
+ */
+.content-area,
+#main,
+.site-main {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/*
+ * Set consistent spacing below articles and the comments section.
+ */
+.inside-article,
+.comments-area,
+.post,
+.page {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+}
+
+/*
+ * Adjust the main content and right sidebar layout on wider screens.
+ */
+@media (min-width: 769px) {
+    .right-sidebar .site-content {
+        display: flex;
+        gap: 5px;
+    }
+
+    .right-sidebar .content-area {
+        flex: 1 1 auto;
+        width: auto !important;
+        margin-right: 0 !important;
+    }
+
+    .right-sidebar .widget-area {
+        flex: 0 0 30%;
+        width: 30% !important;
+        margin-left: 0 !important;
+    }
+}
+
+/*
+ * Reset spacing around the sidebar and its widgets.
+ */
+.widget-area,
+.inside-right-sidebar {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.sidebar .widget {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
+}
+
+/*
+ * Set footer spacing and remove nested duplicate box styling.
+ */
+.site-footer {
+    margin-top: 0 !important;
+    margin-bottom: 3px !important;
+}
+
+.site-footer .site-info,
+.site-footer .footer-widgets {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+}
+
+/*
+ * Table styling.
+ */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1.5em;
+    border: 1px solid #7b797d;
+}
+
+table th,
+table td {
+    border: 1px solid #7b797d;
+    padding: 10px 12px;
+}
+
+/*
+ * Form field styling.
+ */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: #e7e7e7 !important;
+    border: 3px solid #c7c7c7 !important;
+    border-radius: 4px;
+    padding: 8px 10px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+/*
+ * Standard button styling.
+ */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+    background:
+    radial-gradient(ellipse at top left, #0000b3 0%, transparent 70%),
+    radial-gradient(ellipse at top right, #000084 0%, transparent 70%),
+    radial-gradient(ellipse at bottom left, #000052 0%, transparent 70%),
+    #000021 !important;
+    color: #e7e7e7 !important;
+    border: 3px solid #c7c7c7 !important;
+    border-radius: 4px;
+    text-shadow: 1px 1px 2px #000000;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.button:hover {
+    color: #aaaa0a !important;
+}
+
+/*
+ * Site title colors.
+ */
+.main-title a,
+.main-title a:visited,
+.site-title a,
+.site-title a:visited {
+    color: #e7e7e7 !important;
+}
+
+.main-title a:hover,
+.main-title a:focus,
+.site-title a:hover,
+.site-title a:focus {
+    color: #aaaa0a !important;
+}
+
+/*
+ * Breadcrumb navigation.
+ */
+.custom-breadcrumbs {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.custom-breadcrumbs span {
+    color: #e7e7e7;
+}
+
+/*
+ * Social sharing buttons below single post content.
+ */
+.custom-share-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.custom-share-buttons .share-btn,
+.custom-share-buttons .share-btn:visited {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background:
+    radial-gradient(ellipse at top left, #0000b3 0%, transparent 70%),
+    radial-gradient(ellipse at top right, #000084 0%, transparent 70%),
+    radial-gradient(ellipse at bottom left, #000052 0%, transparent 70%),
+    #000021 !important;
+    color: #e7e7e7 !important;
+    border: 3px solid #c7c7c7 !important;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px #000808;
+    text-shadow: 1px 1px 2px #000000;
+    text-decoration: none !important;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 8px 4px;
+    cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: color 0.2s ease;
+}
+
+.custom-share-buttons .share-btn:hover,
+.custom-share-buttons .share-btn:focus {
+    color: #aaaa0a !important;
+}
+
+/*
+ * Allow sharing buttons to wrap on narrow screens when needed.
+ */
+@media (max-width: 480px) {
+    .custom-share-buttons {
+        flex-wrap: wrap;
+    }
+
+    .custom-share-buttons .share-btn {
+        flex: 1 1 calc(50% - 8px);
+        min-width: 0;
+    }
+}
+
+/*
+ * Reduce the comment consent label size to keep it compact.
+ */
+.comment-form-cookies-consent {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.comment-form-cookies-consent label {
+    font-size: 0.72rem !important;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/*
+ * Archive headers and pagination navigation.
+ */
+.page-header,
+.paging-navigation {
+    margin: 0 0 5px 0 !important;
+    padding: 20px 25px;
+}
+
+/*
+ * Prevent excessive bottom spacing in archive descriptions.
+ */
+.page-header .taxonomy-description p:last-child {
+    margin-bottom: 0;
+}
+
+/*
+ * Code block styling.
+ */
+.wp-block-code {
+    background: rgb(0, 0, 0, 0.75);
+}
+
+/*
+ * Quote block styling.
+ */
+blockquote,
+.wp-block-quote {
+    border-left: 4px solid #c7c7c7 !important;
+    box-shadow: 4px 4px 8px #000808;
+    padding: 12px 18px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0 6px 6px 0;
+}
+
+/*
+ * Remove extra bottom spacing from the last paragraph in quote blocks.
+ */
+blockquote p:last-child,
+.wp-block-quote p:last-child {
+    margin-bottom: 0;
+}
+
+/*
+ * Highlight styling.
+ */
+mark {
+    background-color: rgba(0, 223, 222, 0.77) !important;
+    color: #e7e7e7 !important;
+    text-shadow: 1px 1px 2px #000000;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+/*
+ * Gutenberg button styling.
+ */
+.wp-element-button,
+.wp-element-button:visited,
+.wp-block-button__link,
+.wp-block-button__link:visited {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background:
+    radial-gradient(ellipse at top left, #0000b3 0%, transparent 70%),
+    radial-gradient(ellipse at top right, #000084 0%, transparent 70%),
+    radial-gradient(ellipse at bottom left, #000052 0%, transparent 70%),
+    #000021 !important;
+    color: #e7e7e7 !important;
+    border: 3px solid #c7c7c7 !important;
+    border-radius: 4px !important;
+    box-shadow: 4px 4px 8px #000808 !important;
+    text-shadow: 1px 1px 2px #000000 !important;
+    text-decoration: none !important;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: color 0.2s ease;
+}
+
+.wp-element-button:hover,
+.wp-element-button:focus,
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+    color: #aaaa0a !important;
+}
